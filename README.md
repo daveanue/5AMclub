@@ -43,10 +43,12 @@ Run the following command to create a virtual environment named "venv" (you can 
 ```python -m venv venv
 ```
 4. Activate the Virtual Environment:
-   ```source venv/bin/activate```
+   ```
+source venv/bin/activate
+```
 When the virtual environment is activated, you'll see its name in your terminal prompt.
 
-5. Install Dependencies
+6. Install Dependencies
 Now, you can use pip to install packages specifically for this project. For example:
 
 ```pip install Flask```
