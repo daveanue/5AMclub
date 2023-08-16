@@ -27,7 +27,6 @@ If you are developing a production application, we recommend updating the config
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 
-<pre><code>
 # Using Virtual Environment for Python
 
 A virtual environment is like a little sandbox where you can set up specific packages and dependencies for a particular project, without messing up other projects or the system-wide Python installation. Here's how to create and use one:
