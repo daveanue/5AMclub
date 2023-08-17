@@ -1,9 +1,9 @@
 # Project TechStack
-  **Frontend**:
+1.  **Frontend**:
   - React w. TypeScript
   - React Router
   - css library(undecided)
-  **Backend**:
+2.  **Backend**:
   - Python w. Flask
   - DynamoDB
   - AWS SDK Boto3 (undecided)
