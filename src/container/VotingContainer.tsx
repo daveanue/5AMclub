@@ -1,16 +1,8 @@
 import { useState, useEffect, createContext } from 'react';
+import { Product } from '../../interfaces/productTypes';
+import { voteProductsContextType } from '../../interfaces/contextTypes';
 
-interface Product {
-  id : number;
-  name: string;
-  description?: string;
-  price?: number;
-}
 
-interface voteProductsContextType {
-  voteProducts: Product[];
-  setvoteProducts: React.Dispatch<React.SetStateAction<Product[]>>;
-}
 
 const voteProductsContext= createContext<voteProductsContextType | null>(null);
 
