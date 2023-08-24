@@ -1,6 +1,5 @@
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect} from 'react';
 import { Product } from '../../interfaces/productTypes';
-import { voteProductsContextType } from '../../interfaces/contextTypes';
 import { getProducts } from '../utils/getProducts';
 import VotingItem  from '../components/VotingItem';
 
@@ -19,7 +18,7 @@ export default function VotingContainer() {
       }
     }
     fetchData();
-  }, [voteProducts]);
+  }, []);
   return (
       <div>
         {voteProducts.map((product) => (
