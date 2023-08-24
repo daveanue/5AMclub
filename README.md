@@ -8,8 +8,17 @@
   - DynamoDB
   - AWS SDK Boto3 (undecided)
 
-
-
+# Client-Side Cart Management
+   1. **Pros**:
+      - Fast and responsive user experience since no server round-trip for adding items to cart.
+      - Reduced server load as cart updates are handled on client side
+      - Immediate feedback to users as they interact with the cart
+       **Cons**:
+      - Potential data inconsistency if the client's cart and the server's cart go out of sync due to various factors (e.g., multiple devices, page reloads).
+      - When the user eventually decides to checkout, you need to send the cart data to the server for processing the order.
+   2. **Server-side Data Validation**
+      - Before checking out / finalizing order, perform server-side checks to validate item avaliability, and etc.
+      
 # Using Virtual Environment for Python
 
 A virtual environment is like a little sandbox where you can set up specific packages and dependencies for a particular project, without messing up other projects or the system-wide Python installation. Here's how to create and use one:
