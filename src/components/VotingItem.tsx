@@ -1,11 +1,15 @@
 import { VotingItemProps } from "../../interfaces/productTypes";
 
-export default function VotingItem({ product } : VotingItemProps) {
+export default function VotingItem({ id, product, onVoteClick } : VotingItemProps) {
+
+
+
   return (
     <div>
     <h3> {product.name} </h3>
     <h4> {product.price} </h4>
     <p> {product.description} </p>
+    <button onClick={()=> onVoteClick(id)}></button>
     </div>
   )
 }
