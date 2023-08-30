@@ -1,10 +1,10 @@
 import './App.css'
-
+import VotingContainer from './container/VotingContainer'
 function App() {
 
   return (
     <div>
-      <h1>Hello React Router implement</h1>
+      <VotingContainer></VotingContainer>
     </div>
   )
 }
