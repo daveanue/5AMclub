@@ -1,10 +1,9 @@
 import { useState, useEffect} from 'react';
-import { Product } from '../../interfaces/productTypes';
+import { Product } from '../../interfaces/Product';
 import { getProducts } from '../utils/getProducts';
 import { sendVote } from '../utils/sendVote';
 import VotingItem  from '../components/VotingItem';
 
-// shift + option + f auto format codes
 
 export default function VotingContainer() {
   const [voteProducts, setvoteProducts] = useState<Product[]>([
@@ -14,6 +13,7 @@ export default function VotingContainer() {
       description: 'This is the first product',
       price: 19.99,
       voteCount: 5,
+      availableQuantity: 100
     },
     {
       id: 2,
@@ -21,6 +21,7 @@ export default function VotingContainer() {
       description: 'This is the second product',
       price: 29.99,
       voteCount: 8,
+      availableQuantity: 100
     },
     {
       id: 3,
@@ -28,6 +29,7 @@ export default function VotingContainer() {
       description: 'This is the third product',
       price: 9.99,
       voteCount: 3,
+      availableQuantity: 100
     },
   ]);
 
