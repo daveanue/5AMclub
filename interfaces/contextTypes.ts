@@ -1,5 +1,5 @@
 import React from 'react';
-import { Product } from './productTypes';
+import { Product }  from './Product';
 
 export interface voteProductsContextType {
   voteProducts: Product[];

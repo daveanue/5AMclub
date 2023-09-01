@@ -1,4 +1,4 @@
-import { VotingItemProps } from "../../interfaces/productTypes";
+import { VotingItemProps } from "../../interfaces/voteProductTypes";
 
 export default function VotingItem({ id, product, onVoteClick } : VotingItemProps) {
 

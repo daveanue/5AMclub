@@ -3,7 +3,7 @@ import { cartItemsType, CartProviderProps, CartContextType } from '../../interfa
 
 export const CartContext = createContext<CartContextType>({
   cartItems: [],
-  setCartItems: () => {},
+  setCartItems: () => {}, // default: generic function that doesn't do anything
 });
 
 export const CartProvider: React.FC<CartProviderProps> = ( { children } ) => {

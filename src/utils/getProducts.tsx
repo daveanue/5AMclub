@@ -1,4 +1,4 @@
-import { Product } from '../../interfaces/productTypes';
+import { Product } from '../../interfaces/Product';
 import { PRODUCT_URL } from '../../api/apiLinks';
 
 export async function getProducts(): Promise<Product[]> {

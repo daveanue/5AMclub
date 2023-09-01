@@ -1,15 +1,15 @@
 import './App.css'
 import { useState } from 'react';
 import { Product } from '../interfaces/Product';
-import cartItemsType from '../interfaces/cartItemsType';
 import VotingContainer from './container/VotingContainer'
+import { CartProvider } from './context/CartContext';
+import ProductContainer from './container/ProductContainer';
 function App() {
   /*
   reducing traffic load by making cart client sided
   only when decide to checkout do we send all product information
   to server side.
   */
-  const [cartItems, setCartItems] = useState<cartItemsType[]>([]);
 
   const addToCart = (product: Product) => {
     // if the product already exist in the cart, then we need to increment the quantity by 1
@@ -41,9 +41,14 @@ function App() {
   ))
   }
 
+
   return (
     <div>
-      <VotingContainer></VotingContainer>
+      <CartProvider>
+        <ProductContainer />
+      </CartProvider>
+      <VotingContainer />
+
     </div>
   )
 }
