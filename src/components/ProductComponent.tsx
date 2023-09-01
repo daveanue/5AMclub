@@ -1,6 +1,6 @@
 import { ProductComponentProps } from "../../interfaces/Product";
 
-export default function ProductComponent({ id, product, addToCart} : ProductComponentProps) {
+export default function ProductComponent({ product, addToCart} : ProductComponentProps) {
 
 
   return (
@@ -8,7 +8,7 @@ export default function ProductComponent({ id, product, addToCart} : ProductComp
       <h3> {product.name} </h3>
       <h4> {product.price} </h4>
       <p> {product.description} </p>
-      <button onClick={() => addToCart}>+</button>
+      <button onClick={()=>addToCart(product)}>+</button>
     </div>
   )
 }

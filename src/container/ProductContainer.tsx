@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext"
 import { ProductContext } from "../context/ProductContext"
 import ProductComponent from "../components/ProductComponent";
 import { Product } from "../../interfaces/Product";
+
 export default function ProductContainer() {
   /*
     Cart
@@ -23,7 +24,7 @@ export default function ProductContainer() {
   */
 
   const { products } = useContext(ProductContext);
-  const { setCartItems } = useContext(CartContext);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   const addToCart = (product: Product) => {
     // if the product already exist in the cart, then we need to increment the quantity by 1
@@ -39,6 +40,7 @@ export default function ProductContainer() {
         return [...prevCartItems, { product, quantity: 1 }];
       }
     })
+
   }
 
 
@@ -46,14 +48,14 @@ export default function ProductContainer() {
   return (
     <>
       {
-        products.map((product : Product) => {
+        products.map((product : Product) =>
           <ProductComponent
             id={product.id}
             key={product.id}
             product={product}
             addToCart={addToCart}
           />
-        })
+        )
       }
     </>
   )
