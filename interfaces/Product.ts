@@ -6,3 +6,13 @@ export interface Product {
   description?: string;
   price?: number;
 }
+
+
+export interface ProductContextType {
+  products: Product[];
+  setProducts: React.Dispatch<React.SetStateAction<Product[]>>
+}
+
+export interface ProductProviderProps {
+  children: React.ReactNode
+}
