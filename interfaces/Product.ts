@@ -10,9 +10,16 @@ export interface Product {
 
 export interface ProductContextType {
   products: Product[];
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>
+  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
 }
 
 export interface ProductProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
+}
+
+export interface ProductComponentProps {
+  id: number;
+  key?: number;
+  product: Product;
+  addToCart: (product: Product) => void;
 }
