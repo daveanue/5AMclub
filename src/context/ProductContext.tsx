@@ -3,12 +3,12 @@ import { Product, ProductContextType, ProductProviderProps } from '../../interfa
 
 const initialProducts: Product[] = [
   {
-    id: 1,
-    name: "Product 1",
+    id: 10,
+    name: "Hidden Box",
     voteCount: 0,
     availableQuantity: 10,
-    description: "Description for Product 1",
-    price: 19.99,
+    description: "This is a mystery item no one knows what's inside",
+    price: 5.99
   },
   {
     id: 2,
