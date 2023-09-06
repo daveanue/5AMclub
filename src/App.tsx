@@ -3,6 +3,7 @@ import VotingContainer from './container/VotingContainer'
 import { CartProvider } from './context/CartContext';
 import { ProductProvider } from './context/ProductContext';
 import ProductContainer from './container/ProductContainer';
+import CartContainer from './container/CartContainer';
 function App() {
   /*
   reducing traffic load by making cart client sided
@@ -14,6 +15,7 @@ function App() {
     <div>
       <CartProvider>
       <ProductProvider>
+        <CartContainer />
         <ProductContainer />
       </ProductProvider>
       </CartProvider>
