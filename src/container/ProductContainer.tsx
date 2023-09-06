@@ -26,6 +26,7 @@ export default function ProductContainer() {
   const { products } = useContext(ProductContext);
   const { cartItems, setCartItems } = useContext(CartContext);
 
+  // fix this function so that it adds to the cart context
   const addToCart = (product: Product) => {
     // if the product already exist in the cart, then we need to increment the quantity by 1
     setCartItems((prevCartItems) => {
@@ -40,7 +41,6 @@ export default function ProductContainer() {
         return [...prevCartItems, { product, quantity: 1 }];
       }
     })
-
   }
 
 
