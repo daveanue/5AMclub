@@ -9,13 +9,13 @@ export default function CartComponent({ cartItem, removeItem, editItemQuantity }
     setQuantityInput(newValue); // Keep the input as a string
   }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (quantityInput !== '') {
       const parsedValue = parseInt(quantityInput, 10);
       if (!isNaN(parsedValue)) {
-        await editItemQuantity(cartItem.product.id, parsedValue);
+        editItemQuantity(cartItem.product.id, parsedValue);
         console.log('submitted value', parsedValue);
         setQuantityInput(''); // Clear the input after successful submission
       }
