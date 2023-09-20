@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import AdminPortal from './container/adminPortal';
 import ErrorPage from './container/ErrorPage';
+import CommonProvider from './context/CommonProvider';
 import {
   createBrowserRouter,
   RouterProvider
@@ -11,9 +13,19 @@ import './index.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element:
+    <CommonProvider>
+      <App />
+    </CommonProvider>,
     errorElement: <ErrorPage/>,
   },
+  {
+    path: "/admin",
+    element:
+    <CommonProvider>
+      <AdminPortal />
+    </CommonProvider>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
