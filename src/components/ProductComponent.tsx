@@ -4,6 +4,7 @@ export default function ProductComponent({
   product,
   addToCart
 } : ProductComponentProps) {
+
   return (
     <div>
       <h3> {product.name} </h3>
