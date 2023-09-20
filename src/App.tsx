@@ -1,9 +1,7 @@
 import './App.css'
-import VotingContainer from './container/VotingContainer'
-import { CartProvider } from './context/CartContext';
-import { ProductProvider } from './context/ProductContext';
 import ProductContainer from './container/ProductContainer';
 import CartContainer from './container/CartContainer';
+import AdminPortal from './container/adminPortal';
 function App() {
   /*
   reducing traffic load by making cart client sided
@@ -13,14 +11,9 @@ function App() {
 
   return (
     <div>
-      <CartProvider>
-      <ProductProvider>
-        <CartContainer />
-        <ProductContainer />
-      </ProductProvider>
-      </CartProvider>
-
-      <VotingContainer />
+      <AdminPortal/>
+      <ProductContainer />
+      <CartContainer />
     </div>
   )
 }
